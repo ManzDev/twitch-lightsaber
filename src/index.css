@@ -4,24 +4,43 @@
 
 body {
   margin: 0;
-  background: transparent;
   overflow: hidden;
+  height: 100vh;
+  display: flex;
+  background: #222;
 }
 
-body > .container {
+.responsive {
+  width: 700px;
+  height: 700px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.responsive > .container {
+  /* display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-top: 3em;
   margin-left: 0.5em;
   height: 75vh;
-  transform: scale(0.5);
+  transform: scale(0.5); */
+
+  position: absolute;
+  left: 25px;
+  bottom: 0;
+  transform: scale(0.5) rotate(-45deg) translate(0, 0);
+  transform-origin: 0 50%;
 }
 
 .lightsaber {
   display: flex;
 
-  &.open .laser-container {
+  &.open .laser-container,
+  & .laser-max {
     width: 1000px;
   }
 
